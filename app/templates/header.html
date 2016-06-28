@@ -1,0 +1,111 @@
+<html lang="pt">
+<head>
+
+  <meta charset="utf-8">
+  <title>Sistema de Agenda de Usuarios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+
+
+
+<header> <!-- aqui comeca o o menu com a imagem -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+      <img style="max-width:40px; margin-top: -7px;" src="{{ url_for('static', filename='images/mainlogo.png') }}">
+      </a>
+    </div>
+  
+  
+  <div class = "container-fluid">
+      <a href="/dashboard/"><button type="button" class="btn btn-primary" aria-label="Left Align" style="margin-top: 5px; margin-bottom: 5px; height: 44px; margin-right: 15px">
+      <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sistema de Usuarios
+      </button></a>
+
+    
+  <ul class="nav navbar-nav navbar-right"> <!-- menu direito -->
+      
+       
+      <div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
+      <h5>
+
+      <a href="/support-donate/"> <span class="glyphicon glyphicon-pencil"></span> Contato </a>
+  
+      <a href="/login/"> <span class="glyphicon glyphicon-heart"></span> Login</a>
+
+      <a href="/cadastro/"> <span class="glyphicon glyphicon-heart"></span> Cadastrar</a>    
+     
+  </ul>
+  </div>
+
+
+</header> <!-- aqui fechando o menu de cima -->
+
+<body> 
+
+  <div class="container" style="min-height:100% width:80%"> <!-- mensagem de erro (amarela)-->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      {{message}}
+      </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  
+  {% block body %}{% endblock %} <!-- corpo do site fica aqui dentro-->
+
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+
+
+    <div class="footer-container" style="background-color: #ececec">
+  <footer id="footer">
+    <div class="border-row" style="width:100%; margin-bottom: 15px;"> </div>
+    <div class="row">
+      <div class="col-md-2">
+        <ul style="list-style-type: none;">
+            <li><strong>About</strong></li>
+            <li><a href="/contact">Contato</a></li>
+            <li><a href="/support-donate">Suporte</a></li>
+            <li>&copy; Creado por Mário Rodolfo.</li>
+            
+        </ul>
+        
+      </div>
+
+      <div class="col-md-1"> </div>
+      <div class="col-md-2">
+      <ul style="list-style-type: none;">
+      
+            <li><strong>Social</strong></li>
+            <!--<li><a href="/blog">Blog</a></li>-->
+            <li><a href="https://www.facebook.com/mariorodolfo.oliveira" target="_blank"> Facebook</a></li>
+            <li><a href="mariorodolfo.si" target="_blank">Email</a></li>
+            
+      </ul>
+      </div>
+      
+      <div class="col-md-1"> </div>
+      <div class="col-md-2"><ul style="list-style-type: none;">
+          <li><strong>Legal</strong></li>
+          <li><span><a href="/about/tos">Termos de Servico</a></span></li>
+          <li><span><a href="/about/privacy-policy"> 2016</a></span></li>
+          
+          
+        </ul>
+        </div>
+    </div>
+
+    </div>
+  
+  </footer>
+
+</html>

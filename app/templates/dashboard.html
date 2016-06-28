@@ -1,0 +1,676 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#basics" aria-controls="basics" role="tab" data-toggle="tab">Inicio</a></li>
+    <li role="presentation"><a href="#wdev" aria-controls="wdev" role="tab" data-toggle="tab">Download de Filmes </a></li>
+    <li role="presentation"><a href="#dan" aria-controls="dan" role="tab" data-toggle="tab"> Tutoriais </a></li>
+
+  </ul>
+
+  <!-- Tab panes -->
+ 
+<div role="tabpanel" class="tab-pane fade" id="basics"> <!-- conteudo do Inicio-->
+
+<h2 id="interpretador-python">Interpretador Python<a class="anchorjs-link " href="#interpretador-python" aria-label="Anchor link for: interpretador python" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Para começar a brincar com Python nós precisamos abrir uma <em>linha de comando</em> no seu computador. Você já deve saber como fazer isso -- você aprendeu isso no capítulo  <a href="../intro_to_command_line/README.html">Introdução à Linha de Comando</a>.
+Assim que estiver pronto, siga as instruções abaixo.</p>
+<p>Nós queremos abrir o Python num terminal, então digite <code>python3</code> e tecle Enter.</p>
+<pre><code>$ python3
+Python 3.4.2 (...)
+Type "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt;
+</code></pre><h2 id="seu-primeiro-comando-python">Seu primeiro comando Python!<a class="anchorjs-link " href="#seu-primeiro-comando-python" aria-label="Anchor link for: seu primeiro comando python" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Depois de executar o comando Python, o prompt mudou para <code>&gt;&gt;&gt;</code>. Para nós, isso significa que por enquanto só utilizaremos comandos na linguagem Python. Você não precisa digitar <code>&gt;&gt;&gt;</code> - O Python fará isso por você.</p>
+<p>Se você deseja sair do console do Python, apenas digite <code>exit()</code> ou use o atalho <code>Ctrl + Z</code> no Windows e <code>Ctrl + D</code> no Mac/Linux. Então você não vai ver mais o <code>&gt;&gt;&gt;</code>.</p>
+<p>Mas agora não queremos sair da linha de comando do Python. Queremos aprender mais sobre ele. Vamos, então, fazer algo muito simples. Por exemplo, tente digitar alguma operação matemática, como <code>2 + 3</code> e aperte Enter.</p>
+<pre><code>&gt;&gt;&gt; 2 + 3
+5
+</code></pre><p>Incrível! Vê como a resposta simplesmente aparece? O Python conhece matemática! Você pode tentar outros comandos como: - <code>4 * 5</code> - <code>5 - 1</code> - <code>40 / 2</code></p>
+<p>Divirta-se com isso por um tempo e depois volte aqui :).</p>
+<p>Como você pode ver, o Python é uma ótima calculadora. Se você está se perguntando o que mais você pode fazer...</p>
+<h2 id="strings">Strings<a class="anchorjs-link " href="#strings" aria-label="Anchor link for: strings" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Que tal o seu nome? Digite seu primeiro nome entre aspas, desse jeito:</p>
+<pre><code>&gt;&gt;&gt; "Ola"
+'Ola'
+</code></pre><p>Você acabou de criar sua primeira string! String é um sequência de caracteres que podem ser processada pelo computador. A string sempre precisa iniciar e terminar com o mesmo caractere. Este pode ser aspas duplas(<code>'</code>) ou simples(<code>"</code>) - elas dizem ao Python que o que está dentro delas é uma string.</p>
+<p>Strings podem ser juntadas. Tente isto:</p>
+<pre><code>&gt;&gt;&gt; "Oi " + "Ola"
+'Oi Ola'
+</code></pre><p>Você também pode multiplicar strings por um número:</p>
+<pre><code>&gt;&gt;&gt; "Ola" * 3
+'OlaOlaOla'
+</code></pre><p>Se você precisa colocar uma apóstrofe dentro de sua string, existem duas maneiras de fazer.</p>
+<p>Usando aspas duplas:</p>
+<pre><code>&gt;&gt;&gt; "Correndo' ladeira abaixo" 
+"Correndo' ladeira abaixo"
+</code></pre><p>ou escapando apóstrofo com uma barra invertida (``):</p>
+<pre><code>&gt;&gt;&gt; "Correndo\' ladeira abaixo" 
+"Correndo' ladeira abaixo"
+</code></pre><p>Legal, hein? Para ver seu nome em letras maiúsculas, basta digitar:</p>
+<pre><code>&gt;&gt;&gt; "Ola".upper()
+'OLA'
+</code></pre><p>Você acabou de usar a <strong>função</strong> <code>upper</code> na sua string! Uma função (como <code>upper()</code>) é um conjunto de instruções que o Python realiza em um determinado objeto (<code>"Ola"</code>), sempre que você chamar por ele.</p>
+<p>Se você quer saber o número de letras do seu nome, existe uma função para isso também!</p>
+<pre><code>&gt;&gt;&gt; len("Ola")
+3
+</code></pre><p>Se perguntando porque algumas vezes você chama funções com um <code>.</code> no fim de uma string (como <code>"Ola".upper()</code>) e algumas vezes você primeiro chama a função colocando a string nos parênteses? Bem, em alguns casos, funções pertencem a objetos, como <code>upper()</code>, que só pode ser utilizada em strings. Nesse caso, nós chamamos a função de <strong>método</strong>. Outras vezes, funções não pertencem a nada específico e podem ser usadas em diferentes tipos de objetos, assim como <code>len()</code>. É por isso que nós estamos fornecendo <code>"Ola"</code> como um parâmetro para a função <code>len</code>.</p>
+<h3 id="sumário">Sumário<a class="anchorjs-link " href="#sumário" aria-label="Anchor link for: sumário" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h3>
+<p>OK, chega de strings. Até agora você aprendeu sobre:</p>
+<ul>
+<li><strong>o prompt</strong> - digitar comandos (códigos) no interpretador Python resulta em respostas em Python</li>
+<li><strong>números e strings</strong> - no Python, números são usados para matemática e strings para objetos de texto</li>
+<li><strong>operadores</strong> - como + e *, combinam valores para produzir um novo valor</li>
+<li><strong>funções</strong> - como upper() e len(), executam ações nos objetos.</li>
+</ul>
+<p>Isso é o básico sobre todas as linguagens de programação que você aprende. Pronto para algo mais difícil? Apostamos que sim!</p>
+<h2 id="erros">Erros<a class="anchorjs-link " href="#erros" aria-label="Anchor link for: erros" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Vamos tentar algo novo. Podemos obter o tamanho de um número da mesma forma que podemos encontrar o tamanho do nosso nome? Digite <code>len(304023)</code> e pressione Enter:</p>
+<pre><code>&gt;&gt;&gt; len(304023)
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: object of type 'int' has no len()
+</code></pre><p>Temos nosso primeiro erro! Ele diz que objetos do tipo "int" (inteiros, apenas números) não têm nenhum comprimento. Então o que podemos fazer agora? Talvez possamos escrever nosso número como uma string? Strings têm um comprimento, certo?</p>
+<pre><code>&gt;&gt;&gt; len(str(304023))
+6
+</code></pre><p>Funcionou! Usamos a função <code>str</code> dentro da função <code>len</code>. <code>str ()</code> converte tudo para strings.</p>
+<ul>
+<li>A função <code>str</code> converte as coisas em <strong>strings</strong></li>
+<li>A função <code>int</code> converte as coisas em <strong>números inteiros</strong></li>
+</ul>
+<blockquote>
+<p>Importante: podemos converter números em texto, mas nós não podemos, necessariamente, converter texto em números - o que <code>int('hello')</code> quer dizer?</p>
+</blockquote>
+<h2 id="variáveis">Variáveis<a class="anchorjs-link " href="#variáveis" aria-label="Anchor link for: variáveis" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Um conceito importante na programação é o conceito de variáveis. Uma variável não é nada mais do que um nome para alguma coisa, de tal forma que você possa usá-la mais tarde. Os programadores usam essas variáveis para guardar dados, para fazer seus códigos mais legíveis e para não ter que se lembrar sempre o que algumas coisas significam.</p>
+<p>Digamos que queremos criar uma nova variável chamada <code>nome</code>:</p>
+<pre><code>&gt;&gt;&gt; nome = "Ola"
+</code></pre><p>Vê? É fácil! É só fazer: nome igual a Ola.</p>
+<p>Como você percebeu, seu programa não retornou nada como fez anteriormente. Então como sabemos que a variável realmente existe? Simplesmente digite <code>nome</code> e tecle Enter:</p>
+<pre><code>&gt;&gt;&gt; nome
+'Ola'
+</code></pre><p>Yippee! Sua primeira variável! :) Você sempre pode mudar o seu valor:</p>
+<pre><code>&gt;&gt;&gt; nome = "Sonja"
+&gt;&gt;&gt; nome
+'Sonja'
+</code></pre><p>Você pode usá-la também em funções:</p>
+<pre><code>&gt;&gt;&gt; len(nome)
+5
+</code></pre><p>Incrível não? Claro, variáveis podem ser qualquer coisa, então podem ser números também! Tente isso:</p>
+<pre><code>&gt;&gt;&gt; a = 4
+&gt;&gt;&gt; b = 6
+&gt;&gt;&gt; a * b
+24
+</code></pre><p>Mas, e se digitarmos o nome errado? Você consegue adivinhar o que aconteceria? Vamos tentar!</p>
+<pre><code>&gt;&gt;&gt; city = "Tokyo"
+&gt;&gt;&gt; ctiy
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+NameError: name 'ctiy' is not defined
+</code></pre><p>Um erro! Como você pode ver, Python tem diferentes tipos de erros e este é chamado <strong>NameError</strong>. Python dará este erro se você tentar usar uma variável que não foi definida ainda. Se você encontrar esse erro depois, veja se no seu código se você não digitou o nome de uma variável errado.</p>
+<p>Brinque com isso por um tempo e veja o que você consegue fazer!</p>
+<h2 id="a-função-print">A função print<a class="anchorjs-link " href="#a-função-print" aria-label="Anchor link for: a função print" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Tente isso:</p>
+<pre><code>&gt;&gt;&gt; nome = 'Maria'
+&gt;&gt;&gt; nome
+'Maria'
+&gt;&gt;&gt; print(nome)
+Maria
+</code></pre><p>Quando você apenas digita <code>nome</code>, o interpretador Python responde com a <em>representação</em> como string da variável 'name', que são as letras M-a-r-i-a, entre aspas simples. Quando você diz <code>print(nome)</code>, Python vai "imprimir" o conteúdo da variável na tela, sem as aspas, o que é mais puro.</p>
+<p>Como veremos mais tarde, <code>print()</code> também é útil quando queremos imprimir algo dentro de funções, ou quando queremos imprimir algo em várias linhas.</p>
+<h2 id="listas">Listas<a class="anchorjs-link " href="#listas" aria-label="Anchor link for: listas" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Além de strings e inteiros, o Python tem todos os tipos diferentes de objetos. Vamos apresentar um chamado <strong>lista</strong>. Listas são exatamente o que você acha que elas são: elas são objetos que são listas de outros objetos :)</p>
+<p>Vá em frente e crie uma lista:</p>
+<pre><code>&gt;&gt;&gt; []
+[]
+</code></pre><p>Sim, esta é uma lista vazia. Não é muito, não é? Vamos criar uma lista dos números da loteria. Como não queremos ficar repetindo o código todo o tempo vamos criar uma variável para ela:</p>
+<pre><code>&gt;&gt;&gt; loteria = [3, 42, 12, 19, 30, 59]
+</code></pre><p>Tudo certo, nós temos uma lista! O que podemos fazer com isso? Vamos ver quantos números de loteria existem nesta lista. Você tem ideia de qual função deve usar para isso? Você já sabe disso!</p>
+<pre><code>&gt;&gt;&gt; len(loteria)
+6
+</code></pre><p>Sim! <code>len()</code> pode te dar o número de objetos que fazem parte de uma lista. Uma mão na roda, não? Vamos organizar isso agora:</p>
+<pre><code>&gt;&gt;&gt; loteria.sort()
+</code></pre><p>Isso não retorna nada, apenas troca a ordem em que os números aparecem na lista. Vamos imprimir isso outra vez e ver o que acontece:</p>
+<pre><code>&gt;&gt;&gt; print(loteria)
+[3, 12, 19, 30, 42, 59]
+</code></pre><p>Como você pode ver, os números na nossa lista estão ordenados do menor para o maior. Parabéns!</p>
+<p>Talvez a gente queira inverter essa ordem? Vamos fazer isso!</p>
+<pre><code>&gt;&gt;&gt; loteria.reverse()
+&gt;&gt;&gt; print(loteria)
+[59, 42, 30, 19, 12, 3]
+</code></pre><p>Moleza né? Se você quiser adicionar alguma coisa à sua lista, você pode fazer isto digitando o seguinte comando:</p>
+<pre><code>&gt;&gt;&gt; loteria.append(199)
+&gt;&gt;&gt; print(loteria)
+[59, 42, 30, 19, 12, 3, 199]
+</code></pre><p>Se você quiser mostrar apenas o primeiro número você pode usar <strong>índices</strong>. Um índice é um número que diz onde um item da lista está. Os computadores gostam de iniciar a contagem por 0, então o primeiro objeto tem índice 0, o próximo tem índice 1 e por aí vai. Tente isso:</p>
+<pre><code>&gt;&gt;&gt; print(loteria[0])
+59
+&gt;&gt;&gt; print(loteria[1])
+42
+</code></pre><p>Como você pode ver, você pode acessar diferentes objetos na sua lista usando o nome da lista e o índice do objeto dentro dos colchetes.</p>
+<p>Por diversão extra, tente alguns outros índices: 6, 7, 1000, -1, -6 ou -1000. Veja se você consegue prever o resultado antes de tentar o comando. Os resultados fazem sentido?</p>
+<p>Você pode encontrar uma lista de todos os métodos disponíveis neste capítulo na documentação do Python: <a href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">https://docs.python.org/3/tutorial/datastructures.html</a></p>
+<h2 id="dicionários">Dicionários<a class="anchorjs-link " href="#dicionários" aria-label="Anchor link for: dicionários" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Um dicionário é semelhante a uma lista, mas você pode acessar valores através de uma chave ao invés de um índice. Uma chave pode ser qualquer string ou número. A sintaxe para definir um dicionário vazio é:</p>
+<pre><code>&gt;&gt;&gt; {}
+{}
+</code></pre><p>Isso mostra que você acabou de criar um dicionário vazio. Hurra!</p>
+<p>Agora, tente escrever o seguinte comando (tente substituir com as suas próprias informações também):</p>
+<pre><code>&gt;&gt;&gt; participante = {'nome': 'Ola', 'pais': 'Polonia', 'numeros_favoritos': [7, 42, 92]}
+</code></pre><p>Com esse comando, você acabou de criar uma variável chamada <code>participant</code> com três pares de chave-valor:</p>
+<ul>
+<li>A chave <code>nome</code> aponta para o valor <code>'Ola'</code> (um objeto <code>string</code>),</li>
+<li><code>pais</code> aponta para <code>'Polonia'</code> (outra <code>string</code>),</li>
+<li>e <code>numeros_favoritos</code> apontam para <code>[7, 42, 92]</code> (uma <code>list</code> com três números nela).</li>
+</ul>
+<p>Você pode checar o conteúdo de chaves individuais com a sintaxe:</p>
+<pre><code>&gt;&gt;&gt; print(participante['nome'])
+Ola
+</code></pre><p>Veja, é similar a uma lista. Mas você não precisa lembrar o índice - apenas o nome.</p>
+<p>O que acontece se pedirmos ao Python o valor de uma chave que não existe? Você consegue adivinhar? Vamos tentar e descobrir!</p>
+<pre><code>&gt;&gt;&gt; participante['idade']
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+KeyError: 'idade'
+</code></pre><p>Olha, outro erro! Esse é um <strong>KeyError</strong>. Python é bastante prestativo e te diz que a chave <code>'idade'</code> não existe nesse dicionário.</p>
+<p>Quando usar um dicionario ou uma lista? Bem, um bom ponto para refletir. Pense em uma solução antes de olhar a resposta na próxima linha.</p>
+<ul>
+<li>Você precisa de uma sequência ordenada de itens? Use uma list.</li>
+<li>Você precisa associar valores com chaves, assim você pode procurá-los eficientemente (pela chave) mais tarde? Use um dictionary.</li>
+</ul>
+<p>Dicionários, como listas, são <em>mutáveis</em>, ou seja, que podem ser mudados depois que são criados. Você pode adicionar novos pares de chave/valor para o dicionário após sua criação, como:</p>
+<pre><code>&gt;&gt;&gt; participante['linguagem_favorita'] = 'Python'
+</code></pre><p>Como as lists, usar o método <code>len()</code> em dicionários retorna o número de pares chave-valor no dicionario. Vá em frente e digite o comando:</p>
+<pre><code>&gt;&gt;&gt; len(participante)
+4
+</code></pre><p>Espero que agora faça sentido até agora. :) Pronta para mais diversão com dicionários? Pule na próxima linha para coisas incríveis.</p>
+<p>Você pode usar o comando <code>pop()</code> para deletar um item no dicionario. Digamos, se você quer excluir a entrada correspondente a chave <code>'numeros_favoritos'</code>, basta digitar o seguinte comando:</p>
+<pre><code>&gt;&gt;&gt; participante.pop('numeros_favoritos')
+&gt;&gt;&gt; participante
+{'pais': 'Polonia', 'linguagem_favorita': 'Python', 'nome': 'Ola'}
+</code></pre><p>Como você pode ver no retorno, o par chave-valor correspondente à chave 'numeros_favoritos' foi excluído.</p>
+<p>Além disso você pode mudar o valor associado com uma chave já criada no dicionário. Digite:</p>
+<pre><code>&gt;&gt;&gt; participante['pais'] = 'Alemanha'
+&gt;&gt;&gt; participante
+{'pais': 'Alemanha', 'linguagem_favorita': 'Python', 'nome': 'Ola'}
+</code></pre><p>Como você pode ver, o valor da chave <code>'pais'</code> foi alterado de <code>'Polonia'</code> para <code>'Alemanha'</code>. :) Emocionante? Hurra! Você acabou de aprender outra coisa incrível.</p>
+<h3 id="sumário">Sumário<a class="anchorjs-link " href="#sumário" aria-label="Anchor link for: sumário" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h3>
+<p>Incrível! Agora você sabe muito sobre programação. Nesta última parte você aprendeu sobre:</p>
+<ul>
+<li><strong>erros</strong> - agora você sabe como ler e entender erros que aparecem se o Python não entender um comando que você deu</li>
+<li><strong>variáveis</strong> - nomes para objetos que permitem você programar facilmente e deixar seu código mais legível</li>
+<li><strong>listas</strong> - listas de objetos armazenados em uma ordem específica</li>
+<li><strong>dicionários</strong> - objetos armazenados como pares chave-valor</li>
+</ul>
+<p>Empolgado(a) para o próximo passo? :)</p>
+<h2 id="compare-coisas">Compare coisas<a class="anchorjs-link " href="#compare-coisas" aria-label="Anchor link for: compare coisas" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Grande parte da programação consiste em comparar coisas. O que é mais fácil de comparar? Números, é claro. Vamos ver como isso funciona:</p>
+<pre><code>&gt;&gt;&gt; 5 &gt; 2
+True
+&gt;&gt;&gt; 3 &lt; 1
+False
+&gt;&gt;&gt; 5 &gt; 2 * 2
+True
+&gt;&gt;&gt; 1 == 1
+True
+&gt;&gt;&gt; 5 != 2
+True
+</code></pre><p>Demos ao Python alguns números para comparar. Como você pode ver, Python pode comparar não só números mas também resultados de métodos. Legal, hein?</p>
+<p>Você está se perguntando por que colocamos dois sinais de igual <code>==</code> lado a lado para comparar se os números são iguais? Nós usamos um único <code>=</code> para atribuir valores a variáveis. Você sempre, <strong>sempre</strong> precisa colocar dois <code>==</code> se quiser verificar se as coisas são iguais. Também é possível afirmar que as coisas são desiguais entre si. Para isso, usamos o símbolo <code>! =</code>, conforme mostrado no exemplo acima.</p>
+<p>Dê ao Python mais duas tarefas:</p>
+<pre><code>&gt;&gt;&gt; 6 &gt;= 12 / 2
+True
+&gt;&gt;&gt; 3 &lt;= 2
+False
+</code></pre><p><code>&gt;</code> e <code>&lt;</code> são fáceis, mas o que <code>&gt;=</code> e <code>&lt;=</code> significam? Leia eles da seguinte forma:</p>
+<ul>
+<li>x <code>&gt;</code> y significa: x é maior que y</li>
+<li>x <code>&lt;</code> y significa: x é menor que y</li>
+<li>x <code>&lt; =</code> y significa: x é menor ou igual a y</li>
+<li>x <code>&gt;=</code> y significa: x é maior ou igual a y</li>
+</ul>
+<p>Fantástico! Quer mais? Tente isto:</p>
+<pre><code>&gt;&gt;&gt; 6 &gt; 2 and 2 &lt; 3
+True
+&gt;&gt;&gt; 3 &gt; 2 and 2 &lt; 1
+False
+&gt;&gt;&gt; 3 &gt; 2 or 2 &lt; 1
+True
+</code></pre><p>Você pode dar ao Python quantos números para comparar quanto você quiser, e ele vai te dar uma resposta! Espertinho, certo?</p>
+<ul>
+<li><strong>and</strong> - se você usar o operador <code>and</code>, ambas as comparações terão que ser verdadeiras para que todo o comando seja verdadeiro</li>
+<li><strong>or</strong> - se você usar o operador <code>or</code>, apenas uma das comparações precisa ser verdadeira para que o comando todo seja verdadeiro</li>
+</ul>
+<p>Já ouviu a expressão "comparar maçãs com laranjas"? Vamos tentar o equivalente em Python:</p>
+<pre><code>&gt;&gt;&gt; 1 &gt; 'django'
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: unorderable types: int() &gt; str()
+</code></pre><p>Aqui vemos que assim como na expressão, Python não é capaz de comparar um número (<code>int</code>) e uma string (<code>str</code>).
+Em vez disso, ele mostrou um <strong>TypeError</strong> e nos disse que os dois tipos não podem ser comparados juntos.&lt;/p&gt;</p>
+<h2 id="booleano">Booleano<a class="anchorjs-link " href="#booleano" aria-label="Anchor link for: booleano" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+
+<p>Acidentalmente, você aprendeu sobre um novo tipo de objeto em Python. É chamado de <strong>booleano</strong> -- e provavelmente o tipo mais fácil que existe.</p>
+
+<p>Existem apenas dois objetos booleanos: - True (verdadeiro) - False (falso)</p>
+
+<p>Mas para o Python entender isso, você precisa sempre escrever True (primeira letra maiúscula, com o resto das letras em minúsculo). <strong>true, TRUE, tRUE não vai funcionar -- só True é correto.</strong> (O mesmo se aplica ao False, claro.)</p>
+
+<p>Booleanos podem ser variáveis também! Veja:</p>
+
+<pre><code>&gt;&gt;&gt; a = True
+&gt;&gt;&gt; a
+True
+</code></pre><p>Você também pode fazer desse jeito:</p>
+<pre><code>&gt;&gt;&gt; a = 2 &gt; 5
+&gt;&gt;&gt; a
+False
+</code></pre><p>Pratique e divirta-se com os valores booleanos, tentando executar os seguintes comandos:</p>
+<ul>
+<li><code>True and True</code></li>
+<li><code>False and True</code></li>
+<li><code>True or 1 == 1</code></li>
+<li><code>1 != 2</code></li>
+</ul>
+<p>Parabéns! Booleanos são um dos recursos mais interessantes na programação, e você acabou de aprender como usá-los!</p>
+<h1 id="salvá-lo">Salvá-lo!<a class="anchorjs-link " href="#salvá-lo" aria-label="Anchor link for: salvá lo" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h1>
+<p>Até agora nós escrevemos todo nosso código em um interpretador python, que nos limita a uma linha de código em um momento. Programas normais são salvos em arquivos e executados pelo nosso <strong>interpretador</strong> de linguagem de programação ou <strong>compilador</strong>. Até agora já corremos nossos programas de uma linha de cada vez no <strong>interpretador</strong> Python. Nós vamos precisar de mais de uma linha de código para as próximas tarefas, então precisaremos rapidamente:</p>
+<ul>
+<li>Sair do interpretador Python</li>
+<li>Abrir o editor de código de sua escolha</li>
+<li>Salvar algum código em um novo arquivo python</li>
+<li>Executá-lo!</li>
+</ul>
+<p>Para sair do interpretador Python que estamos usando, simplesmente digite a função <code>exit()</code>:</p>
+<pre><code>&gt;&gt;&gt; exit()
+$
+</code></pre><p>Isso vai colocá-la no prompt de comando.</p>
+<p>Anteriormente, nós escolhemos um editor de código da seção do <a href="../code_editor/">editor de código</a>. Nós precisamos abrir o editor agora e escrever algum código em um novo arquivo:</p>
+<pre><code class="lang-python">print(<span class="hljs-string">'Hello, Django girls!'</span>)
+</code></pre>
+<blockquote>
+<p><strong>Nota</strong> Você deve observar que uma das coisas mais legais sobre editores de código: cores! No console do Python, tudo era da mesma cor, mas agora você deve ver que a função de <code>Imprimir</code> é uma cor diferente da sequência de caracteres no seu interior. Isso é chamado de "realce de sintaxe", e é uma ajuda muito útil quando está programando. Perceba a cor das coisas e você vai obter uma dica para quando você esquecer de fechar uma seqüência de caracteres, ou fazer um erro de digitação em um nome de palavra-chave (como <code>def</code> em uma função, que veremos abaixo). Esta é uma das razões pelas quais que nós usamos um editor de código :)</p>
+</blockquote>
+<p>Obviamente, você é um desenvolvedor python bastante experiente agora, então sinta-se livre para escrever um código que você aprendeu hoje.</p>
+<p>Agora temos de salvar o arquivo e dê um nome descritivo. Vamos chamar o arquivo <strong>python_intro.py</strong> e salve-o em seu desktop. Podemos nomear o arquivo tudo o que quisermos, o importante aqui é ter certeza que o arquivo termina no <strong>py</strong>, isto diz nosso computador, que é um <strong>arquivo executável de python</strong> e Python pode executá-lo.</p>
+<p>Com o arquivo salvo, é hora de executá-lo! Usando as habilidades que você aprendeu na seção de linha de comando, use o terminal <strong>altere os diretórios</strong> para o desktop.</p>
+<p>Em um Mac, o comando será parecido com isto:</p>
+<pre><code>cd /Users/&lt;your_name&gt;/Desktop
+</code></pre><p>No Linux, será assim (a palavra "Desktop" pode ser traduzido para seu idioma):</p>
+<pre><code>cd /home/&lt;your_name&gt;/Desktop
+</code></pre><p>E no windows, vai ser assim:</p>
+<pre><code>cd C:\Users\&lt;your_name&gt;\Desktop
+</code></pre><p>Se você ficar preso, só pedir ajuda.</p>
+<p>Em seguida, usar o Python para executar o código no arquivo assim:</p>
+<pre><code>$ python3 python_intro.py
+Hello, Django girls!
+</code></pre><p>Tudo bem! Você acabou de executar seu primeiro programa em python que foi salvo em um arquivo. Se sente ótima?</p>
+<p>Você pode agora passar para uma ferramenta essencial na programação:</p>
+<h2 id="ifelifelse">if...elif...else<a class="anchorjs-link " href="#ifelifelse" aria-label="Anchor link for: ifelifelse" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Muitas coisas no código só podem ser executadas se determinadas condições forem atendidas. É por isso que o Python tem alguma coisa chamada <strong>declaração if</strong>.</p>
+<p>Substitua o código no arquivo <strong>python_intro.py</strong> para isto:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>:
+</code></pre>
+<p>Se salvou este e ele foi executado, nós veríamos um erro como este:</p>
+<pre><code>$ python3 python_intro.py
+File "python_intro.py", line 2
+         ^
+SyntaxError: unexpected EOF while parsing
+</code></pre><p>Python espera que nós forneçamos mais instruções que serão supostamente executadas caso a condição <code>3 &gt; 2</code> venha a ser verdadeira (ou <code>True</code> nesse caso). Vamos tentar fazer o Python imprimir "It works!". Altere o seu código no seu arquivo <strong>python_intro.py</strong> para isto:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>:
+    print(<span class="hljs-string">'It works!'</span>)
+</code></pre>
+<p>Você percebeu que identamos a próxima linha com 4 espaços? Precisamos fazer isso para que o Python saiba qual código será executado se o resultado for True. Você pode fazer com 1 espaço, mas quase todos os programadores Python fazem com 4 para deixar as coisas arrumadas. Um único tab também vai contar como 4 espaços.</p>
+<p>Salvá-lo e execute novamente:</p>
+<pre><code>$ python3 python_intro.py
+It works!
+</code></pre><h3 id="e-se-não">E se não?<a class="anchorjs-link " href="#e-se-não" aria-label="Anchor link for: e se não" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h3>
+<p>Nos exemplos anteriores, o código foi executado somente quando as condições eram verdade. Mas o Python também tem instruções <code>elif</code> e <code>else</code>:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span>:
+    print(<span class="hljs-string">'5 é realmente maior que 2'</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">'5 não é maior que 2'</span>)
+</code></pre>
+<p>Quando for executado irá imprimir:</p>
+<pre><code>$ python3 python_intro.py
+5 é realmente maior que 2
+</code></pre><p>Se 2 for um número maior do que 5, então o segundo comando será executado. Fácil, né? Vamos ver como funciona o <code>elif</code>:</p>
+<pre><code class="lang-python">name = <span class="hljs-string">'Sonja'</span>
+<span class="hljs-keyword">if</span> name == <span class="hljs-string">'Ola'</span>:
+    print(<span class="hljs-string">'Hey Ola!'</span>)
+<span class="hljs-keyword">elif</span> name == <span class="hljs-string">'Sonja'</span>:
+    print(<span class="hljs-string">'Hey Sonja!'</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">'Hey anonymous!'</span>)
+</code></pre>
+<p>e executado:</p>
+<pre><code>$ python3 python_intro.py
+Hey Sonja!
+</code></pre><p>Viu o que aconteceu?</p>
+<h3 id="sumário">Sumário<a class="anchorjs-link " href="#sumário" aria-label="Anchor link for: sumário" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h3>
+<p>Nos últimos três exercícios você aprendeu:</p>
+<ul>
+<li><strong>comparar as coisas</strong> - em Python, você pode comparar as coisas usando os operadores <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, <code>&lt;=</code>, <code>&lt;</code> e o <code>and</code>, <code>or</code></li>
+<li><strong>Booleano</strong> - um tipo de objeto que só tem um dos dois valores: <code>True</code> ou <code>False</code></li>
+<li><strong>Salvando arquivos</strong> - armazenamento de código em arquivos assim você pode executar programas maiores.</li>
+<li><strong>if... elif... else</strong> - instruções que permitem que você execute o código somente se determinadas condições forem atendidas.</li>
+</ul>
+<p>É hora da última parte deste capítulo!</p>
+<h2 id="suas-próprias-funções">Suas próprias funções!<a class="anchorjs-link " href="#suas-próprias-funções" aria-label="Anchor link for: suas próprias funções" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Se lembra de funções como <code>len()</code> que você pode executar no Python? Bem, boas notícias, agora você vai aprender a escrever suas próprias funções!</p>
+<p>Uma função é uma sequência de instruções que o Python deve executar. Cada função em Python começa com a palavra-chave <code>def</code>, seguido de um nome para a função e opcionalmente uma lista de parâmetros. Vamos começar com uma função simples. Substitua o código no <strong>python_intro.py</strong> com o seguinte:</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">()</span>:</span>
+    print(<span class="hljs-string">'Hi there!'</span>)
+    print(<span class="hljs-string">'How are you?'</span>)
+
+hi()
+</code></pre>
+<p>Ok, nossa primeira função está pronta!</p>
+<p>Você pode se perguntar por que escrevemos o nome da função na parte inferior do arquivo. Isto é porque Python lê o arquivo e executa de cima para baixo. Então, para usar a nossa função, temos de escrevê-lo na parte inferior.</p>
+<p>Vamos executa-lo agora e ver o que acontece:</p>
+<pre><code>$ python3 python_intro.py
+Hi there!
+How are you?
+</code></pre><p>Isso foi fácil! Vamos construir nossa primeira função com parâmetros. Usaremos o exemplo anterior - uma função que diz 'hi' para quem o executa - com um name:</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+</code></pre>
+<p>Como você pode ver, agora demos um parâmetro chamado <code>name</code> para nossa função:</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+    <span class="hljs-keyword">if</span> name == <span class="hljs-string">'Ola'</span>:
+        print(<span class="hljs-string">'Hi Ola!'</span>)
+    <span class="hljs-keyword">elif</span> name == <span class="hljs-string">'Sonja'</span>:
+        print(<span class="hljs-string">'Hi Sonja!'</span>)
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">'Hi anonymous!'</span>)
+
+hi()
+</code></pre>
+<p>Como você pode ver, nós precisamos colocar dois espaços antes da função <code>print</code>, porque <code>if</code> precisa saber o que deve acontecer quando a condição for atendida. Vamos ver como isso funciona agora:</p>
+<pre><code>$ python3 python_intro.py
+Traceback (most recent call last):
+File "python_intro.py", line 10, in &lt;module&gt;
+  hi()
+TypeError: hi() missing 1 required positional argument: 'name'
+</code></pre><p>Oops, um erro. Felizmente, Python nos fornece uma mensagem de erro bastante útil. Ela diz que a função <code>hi()</code> (aquela que declaramos) tem um argumento obrigatório (chamado <code>name</code>) e que nós esquecemos de passá-lo ao chamar a função. Vamos corrigi-lo na parte inferior do arquivo:</p>
+<pre><code class="lang-python">hi(<span class="hljs-string">"Ola"</span>)
+</code></pre>
+<p>e execute novamente:</p>
+<pre><code>$ python3 python_intro.py
+Hi Ola!
+</code></pre><p>E se mudarmos o nome?</p>
+<pre><code class="lang-python">hi(<span class="hljs-string">"Sonja"</span>)
+</code></pre>
+<p>e executá-lo:</p>
+<pre><code>$ python3 python_intro.py
+Hi Sonja!
+</code></pre><p>Agora, o que acha que vai acontecer se você escrever outro nome lá? (Sem ser Ola ou Sonja) Experimentá-lo e ver se você está certo. Ele deve imprimir isto:</p>
+<pre><code>Hi anonymous!
+</code></pre><p>Isto é incrível, não? Dessa maneira você não precisa se repetir (DRY - don't repeat yourself, ou em português, não se repita) cada vez que for mudar o nome da pessoa que a função pretende cumprimentar. E é exatamente por isso que precisamos de funções - você nunca quer repetir seu código!</p>
+<p>Vamos fazer algo mais inteligente..--existem mais que dois nomes, e escrever uma condição para cada um seria difícil, certo?</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+    print(<span class="hljs-string">'Hi '</span> + name + <span class="hljs-string">'!'</span>)
+
+hi(<span class="hljs-string">"Rachel"</span>)
+</code></pre>
+<p>Vamos chamar o código agora:</p>
+<pre><code>$ python3 python_intro.py
+Hi Rachel!
+</code></pre><p>Parabéns! Você acabou de aprender a criar funções :)!</p>
+<h2 id="laços">Laços<a class="anchorjs-link " href="#laços" aria-label="Anchor link for: laços" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>Já é a última parte. Foi rápido, não? :)</p>
+<p>Como mencionamos, os programadores são preguiçosos, não gostam de repetir as mesmas coisas. Programação fala sobre como automatizar as coisas, então não queremos cumprimentar cada pessoa pelo seu nome manualmente, certo? É aí onde os laços vem a calhar.</p>
+<p>Ainda se lembra das listas? Vamos fazer uma lista de garotas:</p>
+<pre><code class="lang-python">girls = [<span class="hljs-string">'Rachel'</span>, <span class="hljs-string">'Monica'</span>, <span class="hljs-string">'Phoebe'</span>, <span class="hljs-string">'Ola'</span>, <span class="hljs-string">'You'</span>]
+</code></pre>
+<p>Queremos cumprimentar todas elas pelos seus nomes. Temos a função <code>hi</code> para fazer isso, então vamos usá-la em um loop:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> girls:
+</code></pre>
+<p>O <code>for</code> se comporta da mesma forma que o <code>if</code>, o código abaixo esses dois precisam ser recuados quatro espaços.</p>
+<p>Aqui está o código completo que será salvo no arquivo:</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+    print(<span class="hljs-string">'Hi '</span> + name + <span class="hljs-string">'!'</span>)
+
+girls = [<span class="hljs-string">'Rachel'</span>, <span class="hljs-string">'Monica'</span>, <span class="hljs-string">'Phoebe'</span>, <span class="hljs-string">'Ola'</span>, <span class="hljs-string">'You'</span>]
+<span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> girls:
+    hi(name)
+    print(<span class="hljs-string">'Next girl'</span>)
+</code></pre>
+<p>e quando executá-lo:</p>
+<pre><code>$ python3 python_intro.py
+Hi Rachel!
+Next girl
+Hi Monica!
+Next girl
+Hi Phoebe!
+Next girl
+Hi Ola!
+Next girl
+Hi You!
+Next girl
+</code></pre><p>Como você pode ver, tudo o que você vai colocar dentro de uma instrução <code>for</code> com espaço será repetido para cada elemento da lista <code>girls</code>.</p>
+<p>Você também pode usar o <code>for</code> em números usando a função <code>range</code>:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
+    print(i)
+</code></pre>
+<p>Que iria imprimir:</p>
+<pre><code>1
+2
+3
+4
+5
+</code></pre><p><code>range</code> é uma função que cria uma lista de números que se seguem um após o outro (esses números são dados por você como parâmetros).</p>
+<p>Note que o segundo desses dois números não está incluído na lista que o Python mostrou (em <code>range(1, 6)</code>, conta de 1 a 5, mas o 6 não é incluído).</p>
+<h2 id="sumário">Sumário<a class="anchorjs-link " href="#sumário" aria-label="Anchor link for: sumário" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></h2>
+<p>É isso. <strong>Você é totalmente demais!</strong> Não é tão fácil, então você deve se sentir orgulhosa de si mesma. Estamos definitivamente orgulhosas de você por ter chegado até aqui!</p>
+<p>Talvez você queira brevemente fazer algo mais - espreguiçar, andar um pouco, descansar os olhos - antes de ir para o próximo capítulo. :)</p>
+<p><img src="images/cupcake.png" alt="Cupcake"></p>
+
+                                
+                                </section>
+
+
+
+
+  </div>
+  
+  
+<div role="tabpanel" class="tab-pane fade" id="wdev"> 
+
+<div id="content">
+<div class="post-15978 post type-post status-publish format-standard has-post-thumbnail category-188 category-aventura category-blu-ray category-filmes category-filmes-720p category-misterio category-nacional" id="post-15978">
+<div class="box-post">
+<div class="conteudo">
+<span class="entry-title"><h2><a href="http://www.filmesetorrent.com/o-escaravelho-do-diabo-torrent-720p-bluray-nacional/" rel="bookmark" title="Permanent Link to O Escaravelho do Diabo Torrent (2016) – 720p BluRay Nacional">O Escaravelho do Diabo Torrent (2016) – 720p BluRay Nacional</a></h2></span>
+<div class="post-content">
+<div class="informacoes">
+<p style="text-align: left;"><span style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img title="O Escaravelho do Diabo Torrent 2016 720p BluRay Nacional" src="https://3.bp.blogspot.com/-JTYc3u4n73U/V3FEPCatwqI/AAAAAAAAR_Y/2UR70zL4JoISMujRpGhj1CPwBuVC0CZlwCLcB/s1600/O%2BEscaravelho%2Bdo%2BDiabo%2B2016%2B720p%2BBluRay%2BNacional%2BPoster.jpg" alt="O Escaravelho do Diabo Torrent 2016 720p BluRay Nacional" width="212" height="296"></span></p>
+<p><span style="color: #bc0303;"><strong>Informações Do Filme:</strong></span><br>
+<strong>Titulo Original:</strong> O Escaravelho do Diabo<br>
+<strong>Direção:</strong> Carlo Milani<br>
+<strong>Gênero:</strong> Aventura, Mistério<br>
+<strong>Duração:</strong> 90 Min.<br>
+<strong>Pontuação no</strong> <img title="Pontuação IMDB" src="http://i.imgur.com/Cb9Sum8.png" alt="Pontuação IMDB" width="31" height="14">: 5,7<br>
+<strong>Lançamento:</strong> 2016<br>
+<strong>Formato:</strong> MP4<br>
+<strong>Qualidade:</strong> BluRay 720p<br>
+<strong>Tamanho:</strong> 1.33 GB<br>
+<strong>Nota do Áudio:</strong> 10<br>
+<strong>Nota do Vídeo:</strong> 10<br>
+<strong>Idioma:</strong> Português</p>
+<div style="text-align: justify;">
+<p><span style="color: #bc0303;"><b></b><strong>Sinopse</strong></span>: <strong>O Escaravelho do Diabo Torrent 2016 720p BluRay Nacional</strong> – A pequena cidade de Vale das Flores é marcada por um crime surpreendente: o jovem Hugo Maltese (Cirillo Luna) é encontrado morto com uma antiga espada encravada no peito. O detalhe é que, antes de morrer, ele recebeu uma estranha caixa com um escaravelho dentro. Logo outra vítima é morta, após receber uma caixa semelhante. O delegado Pimentel (Marcos Caruso) e o garoto Alberto Maltese (Thiago Rossetti) começam a buscar este assassino em série, que escolhe seu alvo com uma característica em particular: são todas pessoas ruivas legítimas.<br>
+ <a href="http://www.filmesetorrent.com/o-escaravelho-do-diabo-torrent-720p-bluray-nacional/#more-15978" class="more-link"><img src="http://i.imgur.com/PX4F7rg.png" alt="Post Completo" title="Post Completo" width="181" height="60"></a></p></div>
+</div>
+</div>
+</div>
+<div class="generos">
+<p><strong>Em:</strong> <a href="http://www.filmesetorrent.com/categoria/filmes/2016/" rel="category tag">2016</a>, <a href="http://www.filmesetorrent.com/categoria/filmes/aventura/" rel="category tag">Aventura</a>, <a href="http://www.filmesetorrent.com/categoria/blu-ray/" rel="category tag">Blu-Ray</a>, <a href="http://www.filmesetorrent.com/categoria/filmes/" rel="category tag">Filmes</a>, <a href="http://www.filmesetorrent.com/categoria/blu-ray/filmes-720p/" rel="category tag">Filmes 720p</a>, <a href="http://www.filmesetorrent.com/categoria/filmes/misterio/" rel="category tag">Mistério</a>, <a href="http://www.filmesetorrent.com/categoria/filmes/nacional/" rel="category tag">Nacional</a> <span class="datasingle"><img class="dataimg" src="http://i.imgur.com/NFQpP9X.jpg" alt="Publicado em" title="Publicado em" width="15" height="15"> <span class="post-date">27/06/2016 </span></span>
+</p>
+</div>
+</div>
+</div>
+  
+
+<!--/post-14375-->
+<div class="post-15800 post type-post status-publish format-standard has-post-thumbnail category-arrow category-series" id="post-15800">
+<div class="box-post">
+<div class="conteudo">
+<span class="entry-title"><h2><a href="http://www.filmesetorrent.com/arrow-4-temporada-web-dl-720p-e-1080p-dublado-dual-audio/" rel="bookmark" title="Permanent Link to Arrow 4ª Temporada Torrent (2016) – WEB-DL 720p e 1080p Dublado Dual Áudio">Arrow 4ª Temporada Torrent (2016) – WEB-DL 720p e 1080p Dublado Dual Áudio</a></h2></span>
+<div class="post-content">
+<div class="informacoes">
+<p style="text-align: left;"><span style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img title="Arrow 4ª Temporada Torrent 2016 WEB-DL 720p e 1080p Dublado Dual Áudio" src="http://2.bp.blogspot.com/-XGL-TtefCKE/Vo1KBgseEWI/AAAAAAAAOdc/38-2FLEj8Ac/s1600/Arrow-4-temporada-Torrent.jpg" alt="Arrow 4ª Temporada Torrent 2016 WEB-DL 720p e 1080p Dublado Dual Áudio" width="212" height="296"></span></p>
+<p><span style="color: #bc0303;"><strong>Informações Da Série:</strong></span><br>
+<strong>Titulo Original:</strong> Arrow<br>
+<strong>Criador:</strong> Greg Berlanti, Marc Guggenheim e Andrew Kreisberg<br>
+<strong>Titulo do Episódio</strong>: “-”<br>
+<strong>Episódio Adicionado</strong>: S04E03<br>
+<strong>Temporada</strong>: 4ª<br>
+<strong>Exibição</strong>: The CW<br>
+<strong>Duração:</strong> 41 Min./EP<br>
+<strong>Pontuação no</strong> <img title="Pontuação IMDB" src="http://i.imgur.com/Cb9Sum8.png" alt="Pontuação IMDB" width="31" height="14">: 8,2<br>
+<strong>Lançamento:</strong> 2015-2016<br>
+<strong>Formato:</strong> MKV<br>
+<strong>Qualidade:</strong> HDTV<br>
+<strong>Tamanho:</strong> 260 MB e 1.04 GB / EP<br>
+<strong>Idioma:</strong> Português e Inglês</p>
+<div style="text-align: justify;">
+<p><span style="color: #bc0303;"><b></b><strong>Sinopse</strong></span>: <strong>Arrow 4ª Temporada Torrent 2016 WEB-DL 720p e 1080p Dublado Dual Áudio</strong> – Playboy, milionário e mulherengo, Oliver Queen (Stephen Amell) está presumivelmente morto há 5 anos, quando um acidente de iate causou o desaparecimento dele, de seu pai, Robert (Jamey Sheridan), e Sara Lance, irmã de sua então namorada Laurel (Katie Cassidy). Mas Ollie sobreviveu e, preso em uma ilha, ele aprendeu a lutar por sua vida. De volta à civilização em Starling City, ele é um homem mudado e está decidido a honrar a memória do pai e livrar a cidade da corrupção. Disfarçado, ele usa as habilidades que aprendeu durante seu tempo de reclusão para isso, e ao mesmo tempo precisa esconder sua nova identidade da mãe, Moira (Susanna Thompson), da irmã, Thea (Willa Holland) e dos amigos.</p>
+<blockquote><p><strong>Status:</strong> Adicionado Episódio 4×03</p></blockquote>
+<p> <a href="http://www.filmesetorrent.com/arrow-4-temporada-web-dl-720p-e-1080p-dublado-dual-audio/#more-15800" class="more-link"><img src="http://i.imgur.com/PX4F7rg.png" alt="Post Completo" title="Post Completo" width="181" height="60"></a></p></div>
+</div>
+</div>
+</div>
+<div class="generos">
+<p><strong>Em:</strong> <a href="http://www.filmesetorrent.com/categoria/series/arrow/" rel="category tag">Arrow</a>, <a href="http://www.filmesetorrent.com/categoria/series/" rel="category tag">Séries</a> <span class="datasingle"><img class="dataimg" src="http://i.imgur.com/NFQpP9X.jpg" alt="Publicado em" title="Publicado em" width="15" height="15"> <span class="post-date">27/06/2016 </span></span>
+</p>
+</div>
+</div>
+</div>
+
+<!--/post-15316-->
+<div class="post-15144 post type-post status-publish format-standard has-post-thumbnail category-outcast category-series" id="post-15144">
+<div class="box-post">
+<div class="conteudo">
+<span class="entry-title"><h2><a href="http://www.filmesetorrent.com/outcast-1a-temporada-torrent-2016-webrip-e-720p-legendado-dublado/" rel="bookmark" title="Permanent Link to Outcast 1ª Temporada Torrent (2016) – WEBRip e 720p Legendado Dublado">Outcast 1ª Temporada Torrent (2016) – WEBRip e 720p Legendado Dublado</a></h2></span>
+<div class="post-content">
+<div class="informacoes">
+<p style="text-align: left;"><span style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img title="Outcast 1ª Temporada Torrent 2016 WEBRip e 720p Legendado Dublado" src="https://1.bp.blogspot.com/-oh6nPKDEbxE/V0DEZWHYUDI/AAAAAAAARaE/BiwfuJHEyK8Mu9jsS4EXo1sE0TsHcHsPQCLcB/s1600/Outcast%2BTemporada%2B2016%2BWEBRip%2B720p%2BLegendado%2BDublado%2BPoster.jpg" alt="Outcast 1ª Temporada Torrent 2016 WEBRip e 720p Legendado Dublado" width="212" height="296"></span></p>
+<p><span style="color: #bc0303;"><strong>Informações Da Série:</strong></span><br>
+<strong>Titulo Original:</strong> Outcast<br>
+<strong>Criador:</strong> Robert Kirkman<br>
+<strong>Titulo do Episódio</strong>: “A Wrath Unseen”<br>
+<strong>Episódio Adicionado</strong>: S01E04<br>
+<strong>Temporada</strong>: 1ª<br>
+<strong>Exibição</strong>: Sabado<br>
+<strong>Duração:</strong> 60 Min./EP<br>
+<strong>Pontuação no</strong> <img title="Pontuação IMDB" src="http://i.imgur.com/Cb9Sum8.png" alt="Pontuação IMDB" width="31" height="14">: –<br>
+<strong>Lançamento:</strong> 2016<br>
+<strong>Formato:</strong> MP4 e MKV<br>
+<strong>Qualidade:</strong> WEB-Rip<br>
+<strong>Tamanho:</strong> 478 MB e 571 MB / EP<br>
+<strong>Idioma:</strong> Inglês (Português e Inglês)</p>
+<div style="text-align: justify;">
+<p><span style="color: #bc0303;"><b></b><strong>Sinopse</strong></span>: <strong>Outcast 1ª Temporada Torrent 2016 WEBRip e 720p Legendado Dublado</strong> – Kyle Barnes é um rapaz que, desde a infância, vem sendo alvo de possessões demoníacas. Agora, Kyle está determinado a descobrir a verdade sobre a maldição que lhe atormenta, mesmo que isso signifique um possível extermínio da vida na Terra.</p>
+<blockquote><p><strong>Status:</strong> Adicionado Episódio 1×4</p></blockquote>
+<p> <a href="http://www.filmesetorrent.com/outcast-1a-temporada-torrent-2016-webrip-e-720p-legendado-dublado/#more-15144" class="more-link"><img src="http://i.imgur.com/PX4F7rg.png" alt="Post Completo" title="Post Completo" width="181" height="60"></a></p></div>
+</div>
+</div>
+</div>
+<div class="generos">
+<p><strong>Em:</strong> <a href="http://www.filmesetorrent.com/categoria/series/outcast/" rel="category tag">Outcast</a>, <a href="http://www.filmesetorrent.com/categoria/series/" rel="category tag">Séries</a> <span class="datasingle"><img class="dataimg" src="http://i.imgur.com/NFQpP9X.jpg" alt="Publicado em" title="Publicado em" width="15" height="15"> <span class="post-date">27/06/2016 </span></span>
+</p>
+</div>
+</div>
+</div>
+<!--/post-15144-->
+<div class="post-15966 post type-post status-publish format-standard has-post-thumbnail category-ray-donovan category-series" id="post-15966">
+<div class="box-post">
+<div class="conteudo">
+<span class="entry-title"><h2><a href="http://www.filmesetorrent.com/ray-donovan-4-temporada-torrent-hdtv-720p-e-1080p/" rel="bookmark" title="Permanent Link to Ray Donovan 4ª Temporada Torrent – HDTV 720p e 1080p">Ray Donovan 4ª Temporada Torrent – HDTV 720p e 1080p</a></h2></span>
+<div class="post-content">
+<div class="informacoes">
+<p style="text-align: left;"><span style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img title="Ray Donovan 4ª Temporada Legendado Torrent HDTV 720p 1080p Download" src="https://3.bp.blogspot.com/-p7oZlRuR7Q0/V3EpL1xTK2I/AAAAAAAAR_I/2jvRH_lbZbUYE0Gm1EoQGSTGdrIttfotwCLcB/s1600/Ray%2BDonovan%2B4%2BTemporada%2BLegendado%2BHDTV%2B720p%2B1080p%2BPoster.jpg" alt="Ray Donovan 4ª Temporada Legendado Torrent HDTV 720p 1080p Download" width="212" height="296"></span></p>
+<p><span style="color: #bc0303;"><strong>Informações Da Série:</strong></span><br>
+<strong>Titulo Original:</strong> Ray Donovan<br>
+<strong>Criador:</strong> Ann Biderman<br>
+<strong>Titulo do Episódio</strong>: “Girl with Guitar”<br>
+<strong>Episódio Adicionado</strong>: S04E01<br>
+<strong>Temporada</strong>: 4ª<br>
+<strong>Exibição</strong>: Domingo<br>
+<strong>Duração:</strong> 60 Min./EP<br>
+<strong>Pontuação no</strong> <img title="Pontuação IMDB" src="http://i.imgur.com/Cb9Sum8.png" alt="Pontuação IMDB" width="31" height="14">: 8,3<br>
+<strong>Lançamento:</strong> 2016<br>
+<strong>Formato:</strong> MP4 e MKV<br>
+<strong>Qualidade:</strong> HDTV<br>
+<strong>Tamanho:</strong> 190 MB – 804 MB – 1.72 GB / EP<br>
+<strong>Idioma:</strong> Inglês (Legenda PT-BR)</p>
+<div style="text-align: justify;">
+<p><span style="color: #bc0303;"><b></b><strong>Sinopse</strong></span>: <strong>Ray Donovan 4ª Temporada Legendado Torrent HDTV 720p 1080p Download</strong> – Ray Donovan é um profissional que “consertar” problemas causados pelos ricos e famosos em Los Angeles, o que causa um grande desconforto pra sua família. Seus problemas começam a piorar quando seu pai é liberto da cadeia, e vai atrás de Ray e sua família aparentemente com boas intenções. Ray precisa manter sua família em extrema segurança e continuar cuidando da vida de outras pessoas.</p>
+<blockquote><p><strong>Status:</strong> Adicionado Episódio 4×01</p></blockquote>
+<p> <a href="http://www.filmesetorrent.com/ray-donovan-4-temporada-torrent-hdtv-720p-e-1080p/#more-15966" class="more-link"><img src="http://i.imgur.com/PX4F7rg.png" alt="Post Completo" title="Post Completo" width="181" height="60"></a></p></div>
+</div>
+</div>
+</div>
+<div class="generos">
+<p><strong>Em:</strong> <a href="http://www.filmesetorrent.com/categoria/series/ray-donovan/" rel="category tag">Ray Donovan</a>, <a href="http://www.filmesetorrent.com/categoria/series/" rel="category tag">Séries</a> <span class="datasingle"><img class="dataimg" src="http://i.imgur.com/NFQpP9X.jpg" alt="Publicado em" title="Publicado em" width="15" height="15"> <span class="post-date">27/06/2016 </span></span>
+</p>
+</div>
+</div>
+</div>
+
+<!--/post-14389-->
+<div class="post-15169 post type-post status-publish format-standard has-post-thumbnail category-preacher category-series" id="post-15169">
+<div class="box-post">
+<div class="conteudo">
+<span class="entry-title"><h2><a href="http://www.filmesetorrent.com/preacher-1-temporada-torrent-2016-hdtv-720p-e-1080p-legendado-dublado/" rel="bookmark" title="Permanent Link to Preacher 1ª Temporada Torrent (2016) – HDTV 720p e 1080p Legendado">Preacher 1ª Temporada Torrent (2016) – HDTV 720p e 1080p Legendado</a></h2></span>
+<div class="post-content">
+<div class="informacoes">
+<p style="text-align: left;"><span style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img title="Preacher 1ª Temporada Torrent 2016 HDTV 720p e 1080p Legendado Dublado" src="https://4.bp.blogspot.com/-NGbTCguZPzg/V0MIPmPfSrI/AAAAAAAARak/Pc2FhQY5t0kwX65c5-g1UWhwN1kGjnYVgCLcB/s1600/Preacher%2B1%2BTemporada%2B2016%2BHDTV%2B720p%2B1080p%2BPoster.jpg" alt="Preacher 1ª Temporada Torrent 2016 HDTV 720p e 1080p Legendado Dublado" width="212" height="296"></span></p>
+<p><span style="color: #bc0303;"><strong>Informações Da Série:</strong></span><br>
+<strong>Titulo Original:</strong> Preacher<br>
+<strong>Criador:</strong> Sam Catlin, Garth Ennis, Evan Goldberg<br>
+<strong>Titulo do Episódio</strong>: “South Will Rise Again”<br>
+<strong>Episódio Adicionado</strong>: S01E05<br>
+<strong>Temporada</strong>: 1ª<br>
+<strong>Exibição</strong>: Domingo<br>
+<strong>Duração:</strong> 60 Min./EP<br>
+<strong>Pontuação no</strong> <img title="Pontuação IMDB" src="http://i.imgur.com/Cb9Sum8.png" alt="Pontuação IMDB" width="31" height="14">: 9,2<br>
+<strong>Lançamento:</strong> 2016<br>
+<strong>Formato:</strong> MP4 e MKV<br>
+<strong>Qualidade:</strong> HDTV<br>
+<strong>Tamanho:</strong> 411.92 MB – 1.42 GB – 2.48 GB / EP<br>
+<strong>Idioma:</strong> Inglês</p>
+<div style="text-align: justify;">
+<p><span style="color: #bc0303;"><b></b><strong>Sinopse</strong></span>: <strong>Preacher 1ª Temporada Torrent 2016 HDTV 720p e 1080p Legendado Dublado</strong> – Kyle Barnes é um rapaz que, desde a infância, vem sendo alvo de possessões demoníacas. Agora, Kyle está determinado a descobrir a verdade sobre a maldição que lhe atormenta, mesmo que isso signifique um possível extermínio da vida na Terra.</p>
+<blockquote><p><strong>Status:</strong> Adicionado Episódio 1×5</p></blockquote>
+<p> <a href="http://www.filmesetorrent.com/preacher-1-temporada-torrent-2016-hdtv-720p-e-1080p-legendado-dublado/#more-15169" class="more-link"><img src="http://i.imgur.com/PX4F7rg.png" alt="Post Completo" title="Post Completo" width="181" height="60"></a></p></div>
+</div>
+</div>
+</div>
+<div class="generos">
+<p><strong>Em:</strong> <a href="http://www.filmesetorrent.com/categoria/series/preacher/" rel="category tag">Preacher</a>, <a href="http://www.filmesetorrent.com/categoria/series/" rel="category tag">Séries</a> <span class="datasingle"><img class="dataimg" src="http://i.imgur.com/NFQpP9X.jpg" alt="Publicado em" title="Publicado em" width="15" height="15"> 
+</p>
+</div>
+</div>
+</div>
+<!--/post-15169-->
+
+</div>
+
+
+
+</div> <!-- fim conteudo do download de filmes -->
+  
+  
+  <div role="tabpanel" class="tab-pane fade" id="dan">Criado por Mario Rodolfo</div>
+
+</div>
+
+</div>
+
+{% endblock %}
+ 
